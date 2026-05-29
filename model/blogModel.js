@@ -12,18 +12,16 @@ const blogModel = (sequelize,DataTypes)=>{
         },
         image: {
             type: DataTypes.STRING,
-            allowNull: false,
+            
         },
         blog: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+        
         
     })
+    return Blog;
 }
 
 module.exports = blogModel;

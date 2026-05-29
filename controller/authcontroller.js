@@ -6,7 +6,7 @@ exports.renderRegister = (req,res)=>{
 
 exports.register = async(req,res)=>{
     try{
-        console.log(req.body);
+        
         const {firstName, lastName, email, userName, password} = req.body;
         if(!firstName || !lastName || !email || !userName || !password){
             return res.status(400).json({
