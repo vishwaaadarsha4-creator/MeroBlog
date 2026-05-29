@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Blog</title>
+  <link rel="stylesheet" href="createBlog.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+<%- include("./components/navbar") %>
+
+  <!-- Create Blog Form -->
+  <div class="container">
+
+    <h2>Create New Blog</h2>
+
+    <form action="./createblog" method="post" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label>Blog Title</label>
+        <input type="text" placeholder="Enter blog title" name="title">
+      </div>
+
+      <div class="form-group">
+        <label>Author Name</label>
+        <input type="text" placeholder="Enter author name" name="author">
+      </div>
+
+      <div class="form-group">
+        <label>Blog Image</label>
+        <input type="file" name="image">
+      </div>
+
+      <div class="form-group">
+        <label>Blog Content</label>
+        <textarea placeholder="Write your blog here..." name="blog"></textarea>
+      </div>
+
+      <button class="btn" type="submit">Publish Blog</button>
+
+    </form>
+
+  </div>
+
+  <!-- Footer -->
+<%- include("./components/footer") %>
+
+</body>
+</html>

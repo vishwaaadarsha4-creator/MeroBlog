@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogging Website</title>
+<link rel="stylesheet" href="home.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+<%- include("./components/navbar") %>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to My Blogging Website</h2>
+      <p>Read amazing articles and share your ideas with the world.</p>
+      <a href="#" class="btn">Explore Blogs</a>
+    </div>
+  </section>
+
+  <!-- Blog Cards -->
+  <section class="blogs">
+    <h2>Latest Blogs</h2>
+
+    <div class="blog-container">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Blog Image">
+        <div class="card-content">
+          <h3>Travel Blog</h3>
+          <p>Explore beautiful places around the world with us.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="Blog Image">
+        <div class="card-content">
+          <h3>Technology Blog</h3>
+          <p>Latest updates and trends in technology.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Blog Image">
+        <div class="card-content">
+          <h3>Food Blog</h3>
+          <p>Discover tasty recipes and food experiences.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+<%- include("./components/footer") %>
+
+</body>
+</html>

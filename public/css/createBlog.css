@@ -1,0 +1,128 @@
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f4f4;
+    }
+
+    /* Navbar */
+    nav{
+      background:#222;
+      color:white;
+      padding:15px 50px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      font-size:28px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+    }
+
+    nav ul li{
+      margin-left:20px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:orange;
+    }
+
+    /* Form Container */
+    .container{
+      width:90%;
+      max-width:700px;
+      margin:50px auto;
+      background:white;
+      padding:40px;
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .container h2{
+      text-align:center;
+      margin-bottom:30px;
+      color:#222;
+    }
+
+    .form-group{
+      margin-bottom:20px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:5px;
+      font-size:16px;
+    }
+
+    textarea{
+      resize:none;
+      height:200px;
+    }
+
+    .btn{
+      width:100%;
+      padding:14px;
+      background:orange;
+      border:none;
+      color:white;
+      font-size:18px;
+      border-radius:5px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:darkorange;
+    }
+
+    /* Footer */
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:50px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav{
+        flex-direction:column;
+      }
+
+      nav ul{
+        margin-top:10px;
+      }
+
+      .container{
+        padding:25px;
+      }
+    }
