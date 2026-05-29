@@ -1,3 +1,5 @@
+const db = require("../model");
+const bcrypt = require("bcrypt");
 exports.renderRegister = (req,res)=>{
     res.render("register");
 }
