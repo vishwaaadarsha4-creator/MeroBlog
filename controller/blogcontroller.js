@@ -1,5 +1,9 @@
+
 const db = require("../model");
+const { storage, multer } = require("../middleware/multerConfig");
 const blogs =db.blogs;
+const upload = multer({storage: storage});
+
 exports.home = (req,res)=>{
     res.render("home");
 }
@@ -7,10 +11,11 @@ exports.renderCreateBlog = (req,res)=>{
     res.render("createBLog");
 }
 
-exports.createBLog = async(req,res)=>{
+exports.createBLog =[ upload.single("image") , async(req,res)=>{
     try{
         const {title, author, blog} = req.body;
-        if(!title || !author || !blog){
+        const photo = req.file;
+        if(!title || !author || !blog || !photo){
             return res.status(400).json({
                 message : "All the fields are required"
             });
@@ -19,6 +24,7 @@ exports.createBLog = async(req,res)=>{
             title,
             author,
             blog,
+            image: photo.filename,
             
         });
         return res.redirect("/");
@@ -29,4 +35,4 @@ exports.createBLog = async(req,res)=>{
             message: "Server error cannot publish blog"
         })
     }
-}
+}];
